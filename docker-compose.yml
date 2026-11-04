@@ -1,0 +1,22 @@
+# Local dev Postgres. Creates the NON-superuser app role + enables the pgTAP
+# testing extension, so local tests exercise the real RLS policies (the app
+# role has no BYPASSRLS). Production uses Cloud SQL for PostgreSQL 16.
+services:
+  db:
+    build: ./db
+    image: topbuilder-db:16-pgtap
+    container_name: topbuilder-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: topbuilder
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d topbuilder"]
+      interval: 5s
+      timeout: 5s
+      retries: 10

@@ -1,0 +1,27 @@
+{
+  "name": "Top Builder OS",
+  "short_name": "TopBuilder",
+  "description": "Jobs, costs, and money \u2014 in your pocket, even with no signal.",
+  "start_url": "/field",
+  "display": "standalone",
+  "background_color": "#fbfbfd",
+  "theme_color": "#5450d4",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ]
+}

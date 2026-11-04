@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#1f6f43"/>
+  <path d="M24 70 L64 34 L104 70" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="44" y="70" width="40" height="30" rx="4" fill="#ffffff"/>
+  <text x="64" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#1f6f43">TB</text>
+</svg>
